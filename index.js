@@ -1,3 +1,4 @@
+#!/usr/bin/env node 
 import inquirer from "inquirer";
 import chalk from "chalk";
 let friends = ['Asad', 'Kanwal', 'Rehman', 'Kabir', 'Ayesha'];
@@ -18,7 +19,6 @@ do {
         name: "ans",
         message: "Do you want to continue ?"
     });
-    //if a user answer yes it will start from the begaining
     if (userconfirm.ans) {
         continuePlay = true;
     }
@@ -26,8 +26,3 @@ do {
         continuePlay = false;
     }
 } while (continuePlay);
-// if(userconfirm.ans === false){
-// continuePlay = false
-// } else{
-//     continuePlay = true
-// }

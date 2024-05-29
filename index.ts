@@ -23,7 +23,6 @@ let userconfirm = await inquirer.prompt({
     name: "ans",
     message : "Do you want to continue ?"
 })
-//if a user answer yes it will start from the begaining
 if(userconfirm.ans){
     continuePlay = true
     } else{
