@@ -1,0 +1,22 @@
+{
+  "name": "@amnakh/cli_guess_friend_game",
+  "version": "1.0.0",
+  "description": "This is a CLI based game for guessing a best friend of yours . The random guessing system would shown you the name of your friend. Typescript, Chalk, Inquirer ,Array, Method is used.",
+  "main": "index.js",
+  "type": "module",
+  "bin": "index.js",
+  "publishConfig": {"access": "public"},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.12.12"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "inquirer": "^9.2.22"
+  }
+}

@@ -1,0 +1,34 @@
+#!/usr/bin/env node 
+import inquirer from "inquirer";
+import chalk from "chalk";
+
+let friends : string [] = ['Asad','Kanwal','Rehman','Kabir','Ayesha']
+let continuePlay = true;
+do{
+let userAns = await inquirer.prompt([{
+    type: 'input',
+    name: 'ans',
+    message: 'Guess Your New Friend',
+}])
+friends.push(userAns.ans)
+
+let friendsLength = friends.length;
+let randomIndex = Math.floor(Math.random() * friendsLength);
+let randomName = friends[randomIndex] 
+
+console.log(chalk.bold.redBright(`*** ${randomName} ***`));
+
+let userconfirm = await inquirer.prompt({
+    type: "confirm",
+    name: "ans",
+    message : "Do you want to continue ?"
+})
+//if a user answer yes it will start from the begaining
+if(userconfirm.ans){
+    continuePlay = true
+    } else{
+        continuePlay = false
+    }
+} while(continuePlay)
+
+
